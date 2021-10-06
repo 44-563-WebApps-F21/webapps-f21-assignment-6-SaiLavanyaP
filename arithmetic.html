@@ -7,15 +7,15 @@
 
 <form>
     <label>Enter a base</label>
-    <input type ="number1" id="base"   value= 10> <br>
+    <input type ="number" id="base"   value= 10> <br>
 <br>
     <label>Enter an exponent </label>
-    <input type ="number2" id="exponent"  value = 2> <br>
+    <input type ="number" id="exponent"  value = 2> <br>
 <br>
     <input type="button" onclick="powers()" value="Compute">
 </form>
 <br>
-<p id="resultValue">Computed value displays here </p>
+<p id="Resultval">Computed value displays here </p>
 
 <form>
     <input type="radio" id="plus" name="color" value="plus" onclick="processRadio()">
@@ -30,7 +30,6 @@
     <input type="radio" id="divide" name="color" value="divide" onclick="processRadio()">
     <label for="divide">/</label></br>
 </form>
-
 <p id="Results">This text will be replaced </p>
 
 </body>
@@ -46,7 +45,7 @@ function powers()
       result +=  Math.pow(base,j) + " ";
        
   }
-out = document.getElementById("resultValue is ")
+out = document.getElementById("Resultval")
 out.innerHTML = "Powers of "+ base + " are:" + result;
 }
 
@@ -61,7 +60,7 @@ divide = document.getElementById("divide").checked
 result = 0
 
 if(plus) {
-result = base + exponent
+result = Number(base) + Number(exponent)
 } 
 else if(minus) {
 result = base - exponent
